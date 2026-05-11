@@ -45,12 +45,18 @@ npm run preview
 
 ## GitHub Pages
 
-El proyecto esta configurado para publicarse en GitHub Pages desde la rama `main` usando GitHub Actions.
+El proyecto esta configurado para publicarse en GitHub Pages usando la rama `gh-pages`.
 
 La configuracion importante esta en:
 
 - `vite.config.js`: usa `base: '/NetLab-Assistant/'`
-- `.github/workflows/deploy.yml`: compila y publica el contenido de `dist`
+- `.github/workflows/deploy.yml`: compila desde `main` y publica el contenido de `dist` en `gh-pages`
+
+En GitHub, configura Pages con:
+
+- Source: `Deploy from a branch`
+- Branch: `gh-pages`
+- Folder: `/ (root)`
 
 URL esperada despues del despliegue:
 
